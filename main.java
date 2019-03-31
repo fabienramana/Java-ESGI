@@ -3,8 +3,14 @@ class main{
     public static void main(String args[]){
         
         if(args.length == 1){
-            if(args[0].equals("1")){
-                System.out.println(args[0]);
+            int number = 0;
+            try{
+                number = Integer.parseInt(args[0]);
+                number = number%2;
+                System.out.println(number);
+            }
+            catch(NumberFormatException e){
+                System.out.println("L'argument donné n'est pas une nombre !");
             }
         }
         else if(args.length == 0){
