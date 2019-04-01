@@ -7,8 +7,10 @@ class main{
             
             try{
                 number = Integer.parseInt(args[0]);
-
-                System.out.println("Ob" + Integer.toBinaryString(number));
+                StringBuilder s = new StringBuilder();
+                s.append("0B");
+                s.append(Integer.toBinaryString(number));
+                System.out.println(s);
             }
             catch(NumberFormatException e){
                 System.out.println("L'argument donné n'est pas une nombre !");
