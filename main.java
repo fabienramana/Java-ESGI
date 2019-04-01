@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class main{
 
     public static void main(String args[]){
@@ -9,7 +11,17 @@ class main{
                 number = Integer.parseInt(args[0]);
                 StringBuilder s = new StringBuilder();
                 s.append("0B");
-                s.append(Integer.toBinaryString(number));
+                ArrayList<Integer> newList = new ArrayList<Integer>();
+                while(true){
+                    newList.add(number%2);
+                    number /= 2;
+                    if(number == 0){
+                        break;
+                    }
+                }
+                for(int i=newList.size()-1;i>=0;i--){
+                    s.append(newList.get(i));
+                }
                 System.out.println(s);
             }
             catch(NumberFormatException e){
