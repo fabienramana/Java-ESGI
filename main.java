@@ -6,12 +6,13 @@ class main{
             int number = 0;
             
             try{
-                number = Integer.parseInt(args[0], 2);
+                number = Integer.parseInt(args[0]);
+
+                System.out.println("Ob" + Integer.toBinaryString(number));
             }
             catch(NumberFormatException e){
                 System.out.println("L'argument donné n'est pas une nombre !");
             }
-            System.out.println(number);
         }
         else if(args.length == 0){
             System.out.println("Pas d'arguments !");
